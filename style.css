@@ -15,12 +15,14 @@ header {
     width: 100%;
 }
 header > p {
+    margin-top: -80px;
     font-size: 30px;
     font-family: sans-serif;
     text-transform: uppercase;
     font-weight: bold;
 }
 #icon {
+    margin-top: -80px;
     border: none;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
@@ -36,12 +38,31 @@ main {
 }
 
 #create {
-    position: absolute;
-    top: 140px;
+    top: 110px;
     background-color: white;
-    cursor: pointer;
     border: none;
-    border-radius: 5px;
-    padding: 12px 25%;
+    
 }
+#create, .list {
+    position: absolute;
+    border-radius: 5px;
+    padding: 12px 10px;
+    text-align: left;
+    width: 80%;
+}
+.list {
+    top: 170px;
+    list-style-type: none;
+    background-color: white;
+    box-shadow: 2px 2px 9px grey;
+}
+.addList {
+    border-bottom: 1px solid rgb(181, 181, 181);
+    padding: 10px 0;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
 
