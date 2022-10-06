@@ -29,8 +29,8 @@ header > p {
 }
 
 
-/* *********************
-******TO DO LIST****** */
+/* ******************************
+***********TO DO LIST*********** */
 
 main {
     display: flex;
@@ -56,13 +56,28 @@ main {
     background-color: white;
     box-shadow: 2px 2px 9px grey;
 }
-.addList {
+li {
     border-bottom: 1px solid rgb(181, 181, 181);
-    padding: 10px 0;
-}
+    padding: 17px 0;
+    cursor: pointer;
 
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+li::before {
+    content: url(images/icon-check.svg);
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 0px 3px;
+    border: 1px solid black;
+}
+.addList::before {
+    background-color: rgb(19, 23, 138);
+}
 .done {
     text-decoration: line-through;
+    color: rgb(197, 192, 192);
+    font-size: 15px;
 }
 
 
