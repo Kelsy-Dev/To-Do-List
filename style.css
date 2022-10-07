@@ -60,6 +60,7 @@ li {
     border-bottom: 1px solid rgb(181, 181, 181);
     padding: 17px 0;
     cursor: pointer;
+    outline: 1px solid red;
 
     transition-property: all;
     transition-duration: 0.7s;
@@ -67,10 +68,18 @@ li {
 li::before {
     content: url(images/icon-check.svg);
     border-radius: 50%;
+    outline: 1px solid red;
     margin-right: 10px;
     padding: 0px 3px;
     border: 1px solid black;
 }
+.cross::after {
+    content: url(images/icon-cross.svg);
+    outline: 1px solid red;
+    position: absolute;
+    left: 90%;
+}
+
 .addList::before {
     background-color: rgb(19, 23, 138);
 }
