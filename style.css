@@ -39,49 +39,47 @@ main {
 
 #create {
     top: 110px;
-    background-color: white;
     border: none;
-    
-}
-#create, .list {
-    position: absolute;
     border-radius: 5px;
-    padding: 12px 10px;
     text-align: left;
+}
+#create, .tasklist {
+    position: absolute;
+    padding: 12px 10px;
     width: 80%;
 }
-.list {
-    top: 170px;
-    list-style-type: none;
+
+/* ******************************
+***********TASK LIST*********** */
+.tasklist {
+    padding: 12px 0;
+    top: 150px;
+}
+.task {
     background-color: white;
-    box-shadow: 2px 2px 9px grey;
+    padding: 10px 0;
+    border-radius: 5px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.564);
 }
-li {
-    border-bottom: 1px solid rgb(181, 181, 181);
-    padding: 17px 0;
-    cursor: pointer;
-    outline: 1px solid red;
-
-    transition-property: all;
-    transition-duration: 0.7s;
+.items {
+    padding: 15px 0;
+    margin-left: 10px;
+    outline: none;
+    width: 75%;
 }
-li::before {
-    content: url(images/icon-check.svg);
-    border-radius: 50%;
-    outline: 1px solid red;
-    margin-right: 10px;
-    padding: 0px 3px;
+.check, .cross, .items {
+    border: none;
+    background-color: white;
+}
+.check {
     border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
 }
-.cross::after {
-    content: url(images/icon-cross.svg);
-    outline: 1px solid red;
-    position: absolute;
-    left: 90%;
-}
-
-.addList::before {
-    background-color: rgb(19, 23, 138);
+.ok {
+    background-color: rgb(23, 60, 120);
 }
 .done {
     text-decoration: line-through;
@@ -89,4 +87,18 @@ li::before {
     font-size: 15px;
 }
 
+/* ******************************
+***********TASK LIST*********** */
+
+.drk {
+    background-color: #171723;
+}
+.drkbtn {
+    color: #aaacc3;
+    background-color: #25273d;
+}
+.checkdrk {
+    background-color: #25273d;
+    
+}
 

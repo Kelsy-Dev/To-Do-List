@@ -1,51 +1,78 @@
-const type = document.querySelector('input');
+const bdy = document.querySelector('body');
+const type = document.querySelector('#create');
 const toDo = document.getElementById('create');
-const ul = document.querySelector('.list');
- 
-    toDo.addEventListener("keypress", (e) => {
-        if(e.key === "Enter" && type.value.length > 0) {
-    
-        const li = document.createElement('li');
-    
-        ul.appendChild(li);
-        li.appendChild(document.createTextNode(type.value));
-        li.classList.add('li');
-        type.value = '';
+const tasklist = document.querySelector('.tasklist');
+const darkMode = document.querySelector('#icon');
 
-        li.classList.add('cross');
-        li.addEventListener("click", () => {
-            li.classList.toggle('done');
-            li.classList.toggle('addList');
-        })
-        }  
+const check = document.createElement('button');
+const cross = document.createElement('button');
+
+const task = document.createElement('div');
+const items = document.createElement('input');
+
+// ***********************
+// *********BUTTONS*******
+
+const checkbttn = (btn) => {
+    btn.classList.add('check');
+    const img = document.createElement('img');
+    img.src = `images/icon-check.svg`
+    task.appendChild(btn);
+    btn.appendChild(img);
+}
+
+const crossbttn = () => {
+    cross.classList.add('cross');
+
+    const imgC = document.createElement('img');
+    imgC.src = "images/icon-cross.svg";
+    cross.appendChild(imgC)
+}
+
+toDo.addEventListener("keypress", (e) => {
+    if(e.key === "Enter" && type.value.length > 0) {
+
+    task.classList.add('task');
+    
+    checkbttn(check);
+    crossbttn();
+
+    const fuck = type.value;
+
+    items.type = "text";
+    items.name = "test";
+    items.setAttribute("test", "readonly");
+  
+    tasklist.appendChild(task);
+    task.appendChild(items);
+    task.appendChild(cross);
+    items.classList.add('items');
+    items.innerText = fuck;
+    task.classList.add('task');
+    // task.classList.add('cross');
+    type.value = '';
+
+    check.addEventListener("click", () => {
+        items.classList.toggle('done');
+        check.classList.toggle('ok');
+
+        console.log("Check button");
+    })
+    cross.addEventListener("click", () => {
+        tasklist.removeChild(task);
+        console.log("remove");
     })
 
-//Delete this after you are done
-const task = document.querySelectorAll('li');
-    
-    for (let i = 0; i < task.length; i++) {
-        
-        task[i].classList.add('cross');
-        task[i].addEventListener("click", () => {
-            task[i].classList.toggle('done');
-            task[i].classList.toggle('addList')
-        })
-    }
-
-const crosscheck = document.querySelector('cross');
-
-crosscheck.addEventListener("click", () => {
-    console.log("working");
+    } 
 })
 
+darkMode.addEventListener("click", () => {
+    items.classList.toggle('drkbtn');
+    cross.classList.toggle('drkbtn');
+    task.classList.toggle('drkbtn');
+    type.classList.toggle('drkbtn');
+    bdy.classList.toggle('drk');
+    check.classList.toggle('checkdrk');
 
-
-
-
-
-//Implement .done through new tasks
-
-
-
-
-
+    console.log('works')
+})
