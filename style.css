@@ -22,10 +22,16 @@ header > p {
     font-weight: bold;
 }
 #icon {
+    width: 33px;
+    height: 27px;
+    padding-left: 4.2px;
     margin-top: -80px;
     border: none;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
+}
+#icon:focus {
+    transform: rotate(360deg);
 }
 
 
@@ -65,7 +71,7 @@ main {
     padding: 15px 0;
     margin-left: 10px;
     outline: none;
-    width: 75%;
+    width: 70%;
 }
 .check, .cross, .items {
     border: none;
@@ -99,6 +105,14 @@ main {
 }
 .checkdrk {
     background-color: #25273d;
+}
+.sun {
+    width: 25px;
+    height: 25px;
     
+    transition: all 2s ease-in-out;
+}
+.sun:hover {
+    transform: rotate(360deg);
 }
 
