@@ -85,13 +85,14 @@ main {
     height: 25px;
 }
 .ok {
-    background-color: rgb(23, 60, 120);
+    background-color: rgba(120, 54, 233, 0.777);
 }
 .done {
     text-decoration: line-through;
     color: rgb(197, 192, 192);
     font-size: 15px;
 }
+
 
 /* ******************************
 ***********TASK LIST*********** */
@@ -103,9 +104,9 @@ main {
     color: #aaacc3;
     background-color: #25273d;
 }
-.checkdrk {
-    background-color: #25273d;
-}
+/* .checkdrk {
+    background-color: #ffffff;
+} */
 .sun {
     width: 25px;
     height: 25px;
