@@ -11,36 +11,39 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 600px;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
-  <header>
-    <p>To do</p>
-    <button id="icon">
+<body class="dark">
+  
+<main class="bg">
+  <div class="header">
+    <h1>TO DO</h1>
+
+    <button id="icon" onclick="switchMode()">
       <img src="images/icon-moon.svg" 
       alt="Dark mode button" 
-      height="25px" width="25px" class="moon">
-      </button>
-  </header>
+      height="25px" width="25px" class="moon hide">
+      <img src="images/icon-sun.svg" 
+      alt="Dark mode button" 
+      height="25px" width="25px" class="sun">
+    </button>
+  </div>
 
-  <main>
+  <div class="container">
     <input type="text" 
-    id="create" 
+    id="inputBox" 
+    class="darkLi"
     placeholder="Add a new task...">
     
-    <div class="tasklist">
-       
-      <div class="task ">
-        <button class="check ok"><img src="images/icon-check.svg"></button>
-        <input type="text" class="items" placeholder="Buy some clothes">
-        <button class="cross"><img src="images/icon-cross.svg"></button>
-        </button>
-      </div>
-   
-    </div>
-  </main>
+    <ul id="taskContainer">
+      <!-- <li class=" done darkLi cross">Buy clothes tomorrow</li>
+      <li class=" done darkLi cross">Do groceries</li> -->
+    </ul>
+  </div>
+</main>
+ 
 
   
 

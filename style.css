@@ -1,119 +1,109 @@
 * {
     box-sizing: border-box;
     margin: 0;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10%;
-    background-image: url(images/bg-mobile-light.jpg);
-    background-size: cover;
-    color: white;
-    height: 200px;
-    width: 100%;
-}
-header > p {
-    margin-top: -80px;
-    font-size: 30px;
     font-family: sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
 }
-#icon {
-    width: 33px;
-    height: 27px;
-    padding-left: 4.2px;
-    margin-top: -80px;
-    border: none;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
+body {
+    background-color: #f6f6f8;
 }
-#icon:focus {
-    transform: rotate(360deg);
-}
-
-
-/* ******************************
-***********TO DO LIST*********** */
 
 main {
+    background: url('images/bg-mobile-light.jpg') no-repeat;
+    background-size: cover;
+    padding: 30px 15px;
+    height: 170px;
+    width: 100%;
+}
+.header {
     display: flex;
-    justify-content: center;
-}
-
-#create {
-    top: 110px;
-    border: none;
-    border-radius: 5px;
-    text-align: left;
-}
-#create, .tasklist {
-    position: absolute;
-    padding: 12px 10px;
+    justify-content: space-between;
     width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+    color: white;
 }
 
-/* ******************************
-***********TASK LIST*********** */
-.tasklist {
-    padding: 12px 0;
-    top: 150px;
+
+/* ******CONTAINER*******
+********************** */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto 0;
+    max-width: 600px;;
 }
-.task {
-    background-color: white;
-    padding: 10px 0;
+#inputBox {
+    width: 80%;
+    padding: 15px;
     border-radius: 5px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.564);
-}
-.items {
-    padding: 15px 0;
-    margin-left: 10px;
-    outline: none;
-    width: 70%;
-}
-.check, .cross, .items {
     border: none;
+}
+
+ul {
+    width: 80%;
+    padding-left: 0;
+    margin-top: 10px;
+}
+ul li {
+    list-style-type: none;
     background-color: white;
-}
-.check {
-    border: 1px solid black;
-    border-radius: 50%;
-    margin-left: 10px;
-    width: 25px;
-    height: 25px;
-}
-.ok {
-    background-color: rgba(120, 54, 233, 0.777);
-}
-.done {
-    text-decoration: line-through;
-    color: rgb(197, 192, 192);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 2px;
     font-size: 15px;
 }
-
-
-/* ******************************
-***********TASK LIST*********** */
-
-.drk {
-    background-color: #171723;
+ul li.done::before {
+    content: '';
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0 8px;
+    margin-right: 10px;
+    cursor: pointer;
 }
-.drkbtn {
-    color: #aaacc3;
+ul li.check::before {
+    background: url('images/icon-check.svg') no-repeat;
+    background-position: center;
+    background-color: #a67df8;
+}
+.check {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+/* ******DARK MODE*******
+********************** */
+.dark {
+    background-color: #161620;
+}
+.darkLi {
     background-color: #25273d;
+    color: white;
 }
-/* .checkdrk {
-    background-color: #ffffff;
-} */
-.sun {
-    width: 25px;
-    height: 25px;
-    
-    transition: all 2s ease-in-out;
+.bg {
+    background: url('images/bg-mobile-dark.jpg')no-repeat;
+    background-size: cover;
 }
-.sun:hover {
-    transform: rotate(360deg);
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
 }
+
+.hide {
+    display: none;
+}
+
+/* ******DELETE BUTTON*******
+********************** */
+
+.cross {
+    padding: 10px;
+    background: url('images/icon-cross.svg') no-repeat;
+    float: right;
+    cursor: pointer;
+}
+
 
